@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2022.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    span.s1 {font: 12.0px 'Lucida Grande'}
+    span.s2 {font: 12.0px 'Apple Color Emoji'}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Infographic: The Anatomy of 'Mastering Veo 3'&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Inter', sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #111827; /* Dark background */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #E5E7EB;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chart-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 500px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-left: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-right: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 300px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-height: 400px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (min-width: 768px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.chart-container {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>height: 350px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.gradient-text {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(90deg, #38BDF8, #A78BFA);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-background-clip: text;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-text-fill-color: transparent;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.glass-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: rgba(31, 41, 55, 0.5); /* Semi-transparent dark gray */</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid rgba(255, 255, 255, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>backdrop-filter: blur(12px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-backdrop-filter: blur(12px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.glass-card:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-8px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: rgba(56, 189, 248, 0.5);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.flowchart-step {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.flowchart-arrow {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: scaleX(0);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: opacity 0.5s ease, transform 0.5s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.timeline-item::before {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>content: '';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: -31px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-50%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 22px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #38BDF8;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 4px solid #1F2937;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 0.3s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.timeline-item:hover::before {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-50%) scale(1.2);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.timeline-line {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: -21px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>bottom: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background-color: #374151;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform-origin: top;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: scaleY(0);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: transform 1s ease-in-out;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.animated-element {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(30px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: opacity 0.6s ease-out, transform 0.6s ease-out;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.animated-element.is-visible {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.summary-list li {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding-left: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.summary-list li::before {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>content: '<span class="s1">✓</span>';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: absolute;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>left: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #38BDF8;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="antialiased"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;header class="text-white text-center py-20 sm:py-32 px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="container mx-auto animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1 class="text-5xl md:text-7xl font-bold tracking-tight"&gt;Mastering &lt;span class="gradient-text"&gt;Veo 3&lt;/span&gt;&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="mt-6 text-lg md:text-xl font-light max-w-3xl mx-auto text-gray-300"&gt;An interactive blueprint for the definitive guide to cinematic AI filmmaking.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;main class="container mx-auto px-4 sm:px-6 lg:px-8 py-12"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="introduction" class="mb-24"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center mb-16 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-4xl font-bold mb-4"&gt;The Blueprint for Mastery&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="max-w-2xl mx-auto text-gray-400"&gt;A treatise designed as an accelerated path to expertise, structured for a diverse audience with a singular goal: professional-level content creation.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="glass-card rounded-2xl p-6 animated-element" style="transition-delay: 100ms;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-lg font-semibold text-gray-400"&gt;Target Readership&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container h-64 md:h-72"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="audienceChart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                     </span>&lt;p class="text-sm text-gray-400 mt-4"&gt;The guide caters equally to novices, intermediate practitioners, and advanced AI auteurs.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="glass-card rounded-2xl p-6 flex flex-col justify-center items-center animated-element" style="transition-delay: 200ms;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-lg font-semibold text-gray-400 mb-4"&gt;Core Objective&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-7xl font-extrabold gradient-text"&gt;Mastery&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-300 mt-4"&gt;To elevate any reader to the level of an expert practitioner.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="glass-card rounded-2xl p-6 flex flex-col justify-center items-center space-y-6 animated-element" style="transition-delay: 300ms;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-lg font-semibold text-gray-400"&gt;Project Scope&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-5xl font-bold text-sky-400"&gt;80-120&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-sm text-gray-400"&gt;Pages of In-Depth Content&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                     </span>&lt;div class="text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-5xl font-bold text-sky-400"&gt;9+&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="text-sm text-gray-400"&gt;Structured Chapters&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="anatomy" class="mb-24"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center mb-16 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-4xl font-bold mb-4"&gt;Anatomy of an Optimal Veo Prompt&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="max-w-2xl mx-auto text-gray-400"&gt;Deconstructing prompt engineering into a structured, repeatable process based on the 5 W's.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flowchart-step glass-card rounded-2xl p-6 w-full md:w-48 h-48 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-5xl mb-2"&gt;<span class="s2">👤</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold text-xl text-sky-300"&gt;Who&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-400"&gt;The Subject&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-4xl text-gray-600 font-sans flowchart-arrow animated-element"&gt;&amp;rarr;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flowchart-step glass-card rounded-2xl p-6 w-full md:w-48 h-48 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-5xl mb-2"&gt;<span class="s2">🎬</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold text-xl text-sky-300"&gt;What&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-400"&gt;The Action&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-4xl text-gray-600 font-sans flowchart-arrow animated-element"&gt;&amp;rarr;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flowchart-step glass-card rounded-2xl p-6 w-full md:w-48 h-48 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-5xl mb-2"&gt;<span class="s2">🗓️</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold text-xl text-sky-300"&gt;When&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-400"&gt;The Time&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-4xl text-gray-600 font-sans flowchart-arrow animated-element"&gt;&amp;rarr;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flowchart-step glass-card rounded-2xl p-6 w-full md:w-48 h-48 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="text-5xl mb-2"&gt;<span class="s2">🌍</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold text-xl text-sky-300"&gt;Where&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-400"&gt;The Location&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-4xl text-gray-600 font-sans flowchart-arrow animated-element"&gt;&amp;rarr;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="flowchart-step glass-card rounded-2xl p-6 w-full md:w-48 h-48 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                     </span>&lt;div class="text-5xl mb-2"&gt;<span class="s2">🎨</span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold text-xl text-sky-300"&gt;Why&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-400"&gt;The Style&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="methodologies" class="mb-24"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center mb-16 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-4xl font-bold mb-4"&gt;Core Methodologies Visualized&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="max-w-2xl mx-auto text-gray-400"&gt;Deep dives into key areas of cinematic control and aesthetic definition, emphasizing a balanced and comprehensive approach.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid grid-cols-1 lg:grid-cols-2 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="glass-card rounded-2xl p-6 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold text-center mb-4"&gt;Depth of Didactic Coverage&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="skillsChart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="glass-card rounded-2xl p-6 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold text-center mb-4"&gt;Balancing Prompt Elements&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="chart-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;canvas id="radarChart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;section id="roadmap" class="animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center mb-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-4xl font-bold mb-4"&gt;The Reader's Journey &amp; Key Takeaways&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="max-w-2xl mx-auto text-gray-400"&gt;A structured, progressive path from foundational theory to advanced, ethical application.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="relative pl-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="timeline-line"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="timeline-item relative pb-16 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-bold text-sky-300"&gt;Part 1: Foundational Principles&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-400 mt-2"&gt;Establishing the cinematographic mindset and deconstructing the anatomy of a perfect prompt.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="summary-list mt-4 space-y-2 text-gray-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Learn to "think like a cinematographer" before writing a prompt.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Master the "5 Ws" (Who, What, When, Where, Why/Style) of prompt structure.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Understand core concepts of composition, lighting, and color theory.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="timeline-item relative pb-16 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-bold text-sky-300"&gt;Part 2: Core Prompting Methodologies&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-400 mt-2"&gt;Mastering cinematic control, directing digital actors, and defining world-class aesthetics.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;ul class="summary-list mt-4 space-y-2 text-gray-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Gain precise control over shot types, camera angles, and movement.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Achieve character and object consistency across multiple shots.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Define and blend artistic styles, from photorealism to animation.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="timeline-item relative pb-16 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-bold text-sky-300"&gt;Part 3: Advanced Strategies&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-400 mt-2"&gt;Learning multi-prompt storytelling and professional workflow integration, including post-generative editing.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                     </span>&lt;ul class="summary-list mt-4 space-y-2 text-gray-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Construct coherent narrative sequences using multiple prompts.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Utilize Veo's editing capabilities like masking and extension.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Integrate AI-generated footage into a professional post-production pipeline.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                 </span>&lt;div class="timeline-item relative pb-12 animated-element"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-2xl font-bold text-sky-300"&gt;Part 4: Future &amp; Ethics&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-400 mt-2"&gt;Considering the future landscape and the responsibilities of the ethical prompt engineer.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                     </span>&lt;ul class="summary-list mt-4 space-y-2 text-gray-300"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Understand and mitigate model bias in AI generation.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Learn about content authenticity, watermarking (SynthID), and deepfakes.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;li&gt;Adopt a code of conduct for responsible and ethical creation.&lt;/li&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/ul&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/section&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="text-center py-10 px-4 mt-16 border-t border-gray-800"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-gray-400"&gt;This infographic visualizes the mandate for "Mastering Veo 3: The Definitive Guide".&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-sm text-gray-500 mt-2"&gt;All content derived from the project's formal treatise mandate. Interactive design by Gemini.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener('DOMContentLoaded', () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const observer = new IntersectionObserver((entries) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>entries.forEach(entry =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if (entry.isIntersecting) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>entry.target.classList.add('is-visible');</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (entry.target.classList.contains('timeline-line')) {</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>entry.target.style.transform = 'scaleY(1)';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>if (entry.target.classList.contains('flowchart-arrow')) {</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>entry.target.style.transform = 'scaleX(1)';</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>entry.target.style.opacity = '1';</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}, { threshold: 0.1 });</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.animated-element').forEach(el =&gt; observer.observe(el));</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const timeline = document.querySelector('.timeline-line');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if(timeline) observer.observe(timeline);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('.flowchart-arrow').forEach(el =&gt; observer.observe(el));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const wrapLabel = (label) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const max_width = 16;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (label.length &lt;= max_width) return label;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const words = label.split(' ');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const lines = [];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let currentLine = '';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>for (const word of words) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>if ((currentLine + ' ' + word).trim().length &gt; max_width &amp;&amp; currentLine.length &gt; 0) {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>lines.push(currentLine);</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>currentLine = word;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>currentLine = (currentLine + ' ' + word).trim();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (currentLine) lines.push(currentLine);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return lines;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const tooltipTitleCallback = (tooltipItems) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const item = tooltipItems[0];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>let label = item.chart.data.labels[item.dataIndex];</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return Array.isArray(label) ? label.join(' ') : label;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const commonChartOptions = {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>responsive: true,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>maintainAspectRatio: false,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>plugins: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>legend: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>position: 'bottom',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>labels: {</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>color: '#9CA3AF',</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>font: { family: "'Inter', sans-serif" }</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>tooltip: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>callbacks: { title: tooltipTitleCallback },</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>backgroundColor: '#111827',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>titleColor: '#E5E7EB',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>bodyColor: '#D1D5DB',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>borderColor: '#38BDF8',</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>borderWidth: 1,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>titleFont: { size: 14, weight: 'bold', family: "'Inter', sans-serif" },</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>bodyFont: { size: 12, family: "'Inter', sans-serif" },</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>padding: 12,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>cornerRadius: 8,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const createAudienceChart = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const ctx = document.getElementById('audienceChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>new Chart(ctx, {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>type: 'doughnut',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>labels: ['The Novice', 'The Practitioner', 'The AI Auteur'],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>datasets: [{</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>label: 'Target Audience',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>data: [33.3, 33.3, 33.3],</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>backgroundColor: ['#A78BFA', '#38BDF8', '#0EA5E9'],</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>borderColor: '#1F2937',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>borderWidth: 4,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>hoverOffset: 8</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}]</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>options: { ...commonChartOptions, cutout: '70%' }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const createSkillsChart = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const ctx = document.getElementById('skillsChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>new Chart(ctx, {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>type: 'bar',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>labels: [</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>wrapLabel('Cinematic Control'),</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>wrapLabel('Character Direction'),</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>wrapLabel('Aesthetic &amp; Style Definition'),</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>wrapLabel('Multi-Prompt Storytelling')</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>datasets: [{</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>label: 'Depth of Coverage (out of 10)',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>data: [9, 8, 9.5, 7.5],</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>backgroundColor: 'rgba(56, 189, 248, 0.7)',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>borderColor: '#38BDF8',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>borderWidth: 2,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>borderRadius: 6,</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>barPercentage: 0.6</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}]</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>options: {</p>
+<p class="p1"><span class="Apple-converted-space">                       </span>...commonChartOptions,</p>
+<p class="p1"><span class="Apple-converted-space">                       </span>plugins: { ...commonChartOptions.plugins, legend: { display: false } },</p>
+<p class="p1"><span class="Apple-converted-space">                       </span>scales: {</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>y: {</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>beginAtZero: true, max: 10,</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>grid: { color: 'rgba(255, 255, 255, 0.1)' },</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>ticks: { color: '#9CA3AF' }</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>x: {</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>grid: { display: false },</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>ticks: { color: '#9CA3AF' }</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                       </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const createRadarChart = () =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const ctx = document.getElementById('radarChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>new Chart(ctx, {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>type: 'radar',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>labels: ['Subject', 'Action', 'Environment', 'Style', 'Camera', 'Lighting'],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>datasets: [{</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>label: 'Optimal Prompt Balance',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>data: [8, 7, 9, 10, 8, 7],</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>backgroundColor: 'rgba(56, 189, 248, 0.2)',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>borderColor: '#38BDF8',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>pointBackgroundColor: '#38BDF8',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>pointBorderColor: '#fff',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>pointHoverBackgroundColor: '#fff',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>pointHoverBorderColor: '#38BDF8'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}]</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>options: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>...commonChartOptions,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>plugins: { ...commonChartOptions.plugins, legend: { display: false } },</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>scales: {</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>r: {</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>angleLines: { color: 'rgba(255, 255, 255, 0.1)' },</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>grid: { color: 'rgba(255, 255, 255, 0.1)' },</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>pointLabels: { font: { size: 12, family: "'Inter', sans-serif" }, color: '#D1D5DB' },</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>ticks: {</p>
+<p class="p1"><span class="Apple-converted-space">                                   </span>color: '#111827',</p>
+<p class="p1"><span class="Apple-converted-space">                                   </span>backdropColor: 'rgba(209, 213, 219, 0.8)',</p>
+<p class="p1"><span class="Apple-converted-space">                                   </span>stepSize: 2</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                               </span>min: 0, max: 10</p>
+<p class="p1"><span class="Apple-converted-space">                           </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                       </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>createAudienceChart();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>createSkillsChart();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>createRadarChart();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
